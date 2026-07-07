@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Minimal reproduction: replacementName fails for npm peerDependencies",
   "peerDependencies": {
-    "old-package-wildcard": "*",
-    "old-package-gte": ">=1.0.0"
+    "istanbul-instrumenter-loader": "*",
+    "request": ">=2.0.0"
   }
 }

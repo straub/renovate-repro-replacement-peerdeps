@@ -3,18 +3,18 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
-      "description": "Replace old-package-wildcard with new-package-wildcard (Bug 1: wildcard range)",
+      "description": "Bug 1 (wildcard range): replace istanbul-instrumenter-loader with coverage-istanbul-loader",
       "matchDatasources": ["npm"],
-      "matchDepNames": ["old-package-wildcard"],
-      "replacementName": "new-package-wildcard",
-      "replacementVersion": "2.0.0"
+      "matchDepNames": ["istanbul-instrumenter-loader"],
+      "replacementName": "coverage-istanbul-loader",
+      "replacementVersion": "3.0.5"
     },
     {
-      "description": "Replace old-package-gte with new-package-gte (Bug 2: satisfied range)",
+      "description": "Bug 2 (satisfied range): replace request with got",
       "matchDatasources": ["npm"],
-      "matchDepNames": ["old-package-gte"],
-      "replacementName": "new-package-gte",
-      "replacementVersion": "2.0.0"
+      "matchDepNames": ["request"],
+      "replacementName": "got",
+      "replacementVersion": "14.0.0"
     }
   ]
 }
