@@ -1,1 +1,20 @@
-{}
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:minimal"],
+  "packageRules": [
+    {
+      "description": "Replace old-package-wildcard with new-package-wildcard (Bug 1: wildcard range)",
+      "matchDatasources": ["npm"],
+      "matchDepNames": ["old-package-wildcard"],
+      "replacementName": "new-package-wildcard",
+      "replacementVersion": "2.0.0"
+    },
+    {
+      "description": "Replace old-package-gte with new-package-gte (Bug 2: satisfied range)",
+      "matchDatasources": ["npm"],
+      "matchDepNames": ["old-package-gte"],
+      "replacementName": "new-package-gte",
+      "replacementVersion": "2.0.0"
+    }
+  ]
+}
