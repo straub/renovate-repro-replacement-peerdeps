@@ -1,0 +1,9 @@
+{
+  "name": "renovate-repro-replacement-peerdeps",
+  "version": "1.0.0",
+  "description": "Minimal reproduction: replacementName fails for npm peerDependencies",
+  "peerDependencies": {
+    "old-package-wildcard": "*",
+    "old-package-gte": ">=1.0.0"
+  }
+}
