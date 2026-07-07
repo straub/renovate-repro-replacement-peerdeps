@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:minimal"],
+  "extends": ["config:recommended"],
   "packageRules": [
     {
       "description": "Replace old-package-wildcard with new-package-wildcard (Bug 1: wildcard range)",
