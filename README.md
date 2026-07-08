@@ -9,7 +9,7 @@ This repo has a `package.json` with `peerDependencies` declaring two packages, e
 | Package | Range | What Renovate does |
 |---|---|---|
 | `istanbul-instrumenter-loader` | `"*"` | No replacement PR created, no Dependency Dashboard entry, no log warning |
-| `request` | `">=2.0.0"` | Branch `renovate/request-replacement` is created but `package.json` is unchanged ("No package files need updating") |
+| `request` | `">=2.0.0"` | `package.json` is unchanged ("No package files need updating") |
 
 ## Expected behavior
 
@@ -23,7 +23,7 @@ In both cases, Renovate should create a PR that renames the package in `peerDepe
 **Bug 1 (`"*"` — update silently dropped)**:
 In `lib/workers/repository/process/lookup/utils.ts`, `determineNewReplacementValue()` calls `versioningApi.getNewValue()`. In `lib/modules/versioning/npm/range.ts`, `getNewValue` returns `null` for any X-range (`"*"`, `"x"`, `"X"`) when `rangeStrategy !== 'update-lockfile'`. The `null` value is then filtered out in `lookup/index.ts` before `updateDependency` is ever called.
 
-**Bug 2 (`">=2.0.0"` — branch created, no changes)**:
+**Bug 2 (`">=2.0.0"` — no changes)**:
 `getNewValue` with `rangeStrategy: "widen"` (the default for `peerDependencies`) returns `">=2.0.0"` unchanged because `"14.0.0"` already satisfies `">=2.0.0"`. In `lib/modules/manager/npm/update/dependency/index.ts`, `updateDependency()` has an early-return guard:
 
 ```typescript
