@@ -61,3 +61,7 @@ For Bug 1, `determineNewReplacementValue` would also need to return `currentValu
 ## Link to the Renovate Discussion
 
 [renovatebot/renovate#44426](https://github.com/renovatebot/renovate/discussions/44426)
+
+## Raw Renovate logs
+
+[2026-07-07 run log](logs/2026-07-07-renovate-run.log)
