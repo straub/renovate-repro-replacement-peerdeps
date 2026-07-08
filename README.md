@@ -35,7 +35,7 @@ if (oldVersion === newValue) {
 
 `oldVersion (">=2.0.0") === newValue (">=2.0.0")` → early return → `request` is never renamed to `got` in `package.json`.
 
-In the Dependency Dashboard, the update remains under "The following updates are pending. To force the creation of a PR, click on a checkbox below.", but checking that box still does not create a PR.
+In the [Dependency Dashboard](https://github.com/straub/renovate-repro-replacement-peerdeps/issues/2), the update remains under "The following updates are pending. To force the creation of a PR, click on a checkbox below.", but checking that box still does not create a PR.
 
 Note: Bug 2 also affects regular `dependencies` (not just `peerDependencies`) when the current pinned version equals the `replacementVersion`. See related discussion [#39481](https://github.com/renovatebot/renovate/discussions/39481).
 
