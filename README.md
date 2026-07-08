@@ -8,7 +8,7 @@ This repo has a `package.json` with `peerDependencies` declaring two packages, e
 
 | Package | Range | What Renovate does |
 |---|---|---|
-| `istanbul-instrumenter-loader` | `"*"` | No replacement PR created, no Dependency Dashboard entry, no log warning |
+| `istanbul-instrumenter-loader` | `"*"` | No replacement PR created, no [Dependency Dashboard](https://github.com/straub/renovate-repro-replacement-peerdeps/issues/2) entry, no log warning |
 | `request` | `">=2.0.0"` | `package.json` is unchanged ("No package files need updating") |
 
 ## Expected behavior
