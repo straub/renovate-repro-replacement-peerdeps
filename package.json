@@ -4,6 +4,6 @@
   "description": "Minimal reproduction: replacementName fails for npm peerDependencies",
   "peerDependencies": {
     "istanbul-instrumenter-loader": "*",
-    "request": ">=2.0.0"
+    "got": ">=2.0.0"
   }
 }
